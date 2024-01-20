@@ -25,6 +25,7 @@ class _HomeScreenState extends State<HomeScreen> {
             fontSize: 30,
           ),
         ),
+        iconTheme: IconThemeData(color: Theme.of(context).colorScheme.primary),
         actions: const [
           Icon(
             Icons.search,
@@ -42,13 +43,13 @@ class _HomeScreenState extends State<HomeScreen> {
           ),
         ],
       ),
-      backgroundColor: Colors.grey.shade800,
+      backgroundColor: Theme.of(context).colorScheme.primary,
       body: ListView(
         children: [
           Container(
             width: double.infinity,
-            decoration: const BoxDecoration(
-              color: Colors.white,
+            decoration: BoxDecoration(
+              color: Theme.of(context).colorScheme.background,
             ),
             child: Container(
               padding: const EdgeInsets.only(
@@ -103,19 +104,16 @@ class _HomeScreenState extends State<HomeScreen> {
                               ),
                               Text(
                                 "Live",
-                                style: TextStyle(
-                                  color: Colors.black,
-                                ),
                               ),
                             ],
                           ),
                         ),
-                        const VerticalDivider(
+                        VerticalDivider(
                           thickness: 1,
                           width: 0,
                           indent: 0,
                           endIndent: 0,
-                          color: Colors.black,
+                          color: Theme.of(context).colorScheme.primary,
                         ),
                         TextButton(
                           onPressed: () {},
@@ -132,19 +130,16 @@ class _HomeScreenState extends State<HomeScreen> {
                               ),
                               Text(
                                 "Photo",
-                                style: TextStyle(
-                                  color: Colors.black,
-                                ),
                               ),
                             ],
                           ),
                         ),
-                        const VerticalDivider(
+                        VerticalDivider(
                           thickness: 1,
                           width: 0,
                           indent: 0,
                           endIndent: 0,
-                          color: Colors.black,
+                          color: Theme.of(context).colorScheme.primary,
                         ),
                         TextButton(
                           onPressed: () {},
@@ -158,9 +153,6 @@ class _HomeScreenState extends State<HomeScreen> {
                               ),
                               Text(
                                 "Check in",
-                                style: TextStyle(
-                                  color: Colors.black,
-                                ),
                               ),
                             ],
                           ),
@@ -177,8 +169,8 @@ class _HomeScreenState extends State<HomeScreen> {
           ),
           Container(
             width: double.infinity,
-            decoration: const BoxDecoration(
-              color: Colors.white,
+            decoration: BoxDecoration(
+              color: Theme.of(context).colorScheme.background,
             ),
             child: const StoryView(),
           ),

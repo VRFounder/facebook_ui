@@ -1,4 +1,5 @@
 import 'package:facebook_ui/screens/home_screen.dart';
+import 'package:facebook_ui/themes/theme.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -13,10 +14,8 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-        useMaterial3: true,
-      ),
+      theme: lightMode,
+      darkTheme: darkMode,
       home: const HomeScreen(),
     );
   }

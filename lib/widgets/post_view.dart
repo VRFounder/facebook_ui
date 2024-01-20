@@ -12,8 +12,8 @@ class PostView extends StatelessWidget {
     return Container(
       margin: const EdgeInsets.only(bottom: 5),
       width: double.infinity,
-      decoration: const BoxDecoration(
-        color: Colors.white,
+      decoration: BoxDecoration(
+        color: Theme.of(context).colorScheme.background,
       ),
       child: Column(
         children: [
@@ -51,7 +51,7 @@ class PostView extends StatelessWidget {
                 ),
                 IconButton(
                   onPressed: () {},
-                  icon: const Icon(Icons.more_horiz),
+                  icon: Icon(Icons.more_horiz, color: Theme.of(context).colorScheme.secondary,),
                 ),
               ],
             ),
@@ -92,7 +92,7 @@ class PostView extends StatelessWidget {
                         alignment: Alignment.centerLeft,
                         children: [
                           CircleAvatar(
-                            backgroundColor: Colors.black,
+                            backgroundColor: Theme.of(context).colorScheme.secondary,
                             radius: 12,
                             child: Container(
                               width: 20,
@@ -111,7 +111,7 @@ class PostView extends StatelessWidget {
                           Positioned(
                             left: 18,
                             child: CircleAvatar(
-                              backgroundColor: Colors.black,
+                              backgroundColor: Theme.of(context).colorScheme.secondary,
                               radius: 12,
                               child: Container(
                                 width: 20,
@@ -133,13 +133,13 @@ class PostView extends StatelessWidget {
                     ),
                     Text(
                       "${post.likes} K",
-                      style: const TextStyle(color: Colors.blueGrey),
+                      style: TextStyle(color: Theme.of(context).colorScheme.primary),
                     ),
                   ],
                 ),
                 Text(
                   "${post.comments} Comments",
-                  style: const TextStyle(color: Colors.blueGrey),
+                  style: TextStyle(color: Theme.of(context).colorScheme.primary),
                 ),
               ],
             ),
