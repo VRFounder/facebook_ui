@@ -51,7 +51,7 @@ class PostView extends StatelessWidget {
                 ),
                 IconButton(
                   onPressed: () {},
-                  icon: Icon(Icons.more_horiz, color: Theme.of(context).colorScheme.secondary,),
+                  icon: Icon(Icons.more_horiz, color: Theme.of(context).colorScheme.onBackground,),
                 ),
               ],
             ),
